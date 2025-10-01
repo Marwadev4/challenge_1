@@ -1,0 +1,6 @@
+class TaskModel {
+  final String title;
+  bool isDone;
+
+  TaskModel({required this.title, this.isDone = false});
+}
