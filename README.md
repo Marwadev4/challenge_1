@@ -1,16 +1,13 @@
-# challenge_1
+# Challenge 1: Interactive Dismissible Lists
 
-A new Flutter project.
+Create a task management widget using Dismissible combined with
+ReorderableListView. Users should be able to swipe to delete tasks and drag to reorder
+them. Include confirmation dialogs and undo functionality.
+Requirements:
+• Use Dismissible for swipe-to-delete functionality
+• Use ReorderableListView for drag-to-reorder
+• Show confirmation dialog before deletion
+• Provide undo functionality using SnackBar
+• Include at least 3 sample tasks
 
-## Getting Started
-
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+https://github.com/user-attachments/assets/ec705c5d-9ae7-4d4c-8ffa-39f9b4802936
