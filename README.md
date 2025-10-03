@@ -10,10 +10,6 @@ A Flutter task management widget that combines `Dismissible` with `ReorderableLi
 - ↩️ **Undo Functionality**: Restore accidentally deleted tasks using SnackBar
 - 📱 **Responsive Design**: Works on both mobile and desktop
 
-## Demo
-
-![Interactive Dismissible Lists Demo](https://via.placeholder.com/300x600?text=Demo+Image)
-
 ## Getting Started
 
 ### Prerequisites
