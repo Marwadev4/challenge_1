@@ -1,3 +1,4 @@
+import 'package:challenge_1/dialog.dart';
 import 'package:challenge_1/task_card.dart';
 import 'package:challenge_1/task_model.dart';
 import 'package:flutter/material.dart';
@@ -32,10 +33,29 @@ class _HomePageState extends State<HomePage> {
           onReorder: (oldIndex, newIndex) {},
           itemBuilder: (context, index) => Dismissible(
             key: ValueKey(tasks[index]),
+            confirmDismiss: (direction) async {
+              return await showDialog(
+                context: context,
+                builder: (BuildContext context) {
+                  return CustomDialog();
+                },
+              );
+            },
             onDismissed: (direction) {
-              setState(() {
-                tasks.removeAt(index);
-              });
+              final deletedTask = tasks[index];
+              final deletedIndex = index;
+              setState(() => tasks.removeAt(index));
+              ScaffoldMessenger.of(context).hideCurrentSnackBar();
+              ScaffoldMessenger.of(context).showSnackBar(
+                SnackBar(
+                  content: const Text('Task deleted'),
+                  action: SnackBarAction(
+                    label: 'Undo',
+                    onPressed: () =>
+                        setState(() => tasks.insert(deletedIndex, deletedTask)),
+                  ),
+                ),
+              );
             },
             child: TaskCard(task: tasks[index]),
           ),
